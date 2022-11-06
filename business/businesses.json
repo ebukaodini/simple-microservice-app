@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1667728398111,
+    "business": "Chicken Republic",
+    "description": "A restaurant for eating chicken",
+    "branches": 10
+  },
+  {
+    "id": 1667728440678,
+    "business": "Mega Chicken",
+    "description": "A place for big mega chicken",
+    "branches": 8
+  },
+  {
+    "id": 1667728471248,
+    "business": "The Place",
+    "description": "The Place that 2face sang about. #TB",
+    "branches": 6
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1667725270415,
+    "email": "ebukaodini@example.com",
+    "password": "ebukaodini",
+    "role": "admin"
+  },
+  {
+    "id": 1667725300907,
+    "email": "calvinlee@example.com",
+    "password": "calvinlee",
+    "role": "user"
+  },
+  {
+    "id": 1667725336427,
+    "email": "darwinnunez@example.com",
+    "password": "darwinnunez",
+    "role": "user"
+  }
+]

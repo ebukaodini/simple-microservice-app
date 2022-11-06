@@ -1,0 +1,49 @@
+version: "3.2"
+services:
+  accounts:
+    build: ./accounts
+    ports:
+      - '5000:5000'
+
+  business:
+    build: ./business
+    ports:
+      - '5001:5001'
+
+  orders:
+    build: ./orders
+    ports:
+      - '5002:5002'
+    restart: always
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+
+  payments:
+    build: ./payments
+    ports:
+      - '5003:5003'
+    restart: always
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+      # @rabbitmq
+
+  cards:
+    build: ./cards
+    ports:
+      - '5004:5004'
+    restart: always
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
