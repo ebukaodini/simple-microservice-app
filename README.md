@@ -1,4 +1,4 @@
-# Simple Ecommerce App built with microservices.
+# Simple Ecommerce App.
 A simple application to reflect a custom e-commerce store using the micro-service design architecture. Technologies used are NodeJs, JavaScript, RabbitMQ.
 
 ## Services
@@ -41,6 +41,22 @@ An admin can add new businesses to the business record. An admin can also toggle
   - workers:
     - `DELIVER_CARDS` - adds ordered cards for user
 
+## Postman Docs:
+https://documenter.getpostman.com/view/6884204/2s8YYJp2Td
+
+## Build
+Build Docker containers locally
+
+```bash
+$ docker-compose up --build -d
+```
+
+## Usage
+After you've spun up the container, run
+
+```bash
+$ docker-compose up -d
+```
 
 > NOTE: This project is not done with best practice in mind. Do not use for production.
 
