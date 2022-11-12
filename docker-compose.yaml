@@ -29,7 +29,6 @@ services:
       - rabbitmq
     depends_on:
       - rabbitmq
-      # @rabbitmq
 
   cards:
     build: ./cards

@@ -6,7 +6,7 @@ const accounts = require('./accounts.json');
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.send(`Welcome to accounts. ${dateToString(Date.now())}`)
+  res.send(`Welcome to accounts.`)
 })
 
 router.post('/register', (req, res) => {
