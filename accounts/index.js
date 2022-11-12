@@ -1,11 +1,12 @@
 const express = require('express');
 const { writeFile } = require('fs');
+const dateToString = require('common');
 const app = express();
 const accounts = require('./accounts.json');
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.send('Welcome to accounts')
+  res.send(`Welcome to accounts. ${dateToString(Date.now())}`)
 })
 
 router.post('/register', (req, res) => {
