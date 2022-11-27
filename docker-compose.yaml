@@ -1,17 +1,23 @@
 version: "3.2"
 services:
   accounts:
-    build: ./accounts
+    build:
+      context: .
+      dockerfile: ./packages/accounts/Dockerfile
     ports:
       - '5000:5000'
 
   business:
-    build: ./business
+    build:
+      context: .
+      dockerfile: ./packages/business/Dockerfile
     ports:
       - '5001:5001'
 
   orders:
-    build: ./orders
+    build:
+      context: .
+      dockerfile: ./packages/orders/Dockerfile
     ports:
       - '5002:5002'
     restart: always
@@ -21,7 +27,9 @@ services:
       - rabbitmq
 
   payments:
-    build: ./payments
+    build:
+      context: .
+      dockerfile: ./packages/payments/Dockerfile
     ports:
       - '5003:5003'
     restart: always
@@ -31,7 +39,9 @@ services:
       - rabbitmq
 
   cards:
-    build: ./cards
+    build:
+      context: .
+      dockerfile: ./packages/cards/Dockerfile
     ports:
       - '5004:5004'
     restart: always
